@@ -1,13 +1,5 @@
 # TRAD: Topology and Risk-Aware AC Dispatch
 
-Agent for power grid congestion management. 2nd place in the AI4REALNET L2RPN 2026 competition
-(score 67.24, 199 of 208 weeks survived).
-
-**Method**
-1. **Quantal-response risk decision:** pre-emptive busbar split or line opening against likely attacks.
-2. **Multi-objective AC-OPF:** minimise the worst overload, then the cost of redispatch, storage and curtailment (solved with IPOPT).
-3. **LODF busbar splitting:** expert-system topology fallback (Marot et al., 2018).
-
 ## Environment
 
 | | |
@@ -61,7 +53,7 @@ submission/
   ipopt_testing/     bundled IPOPT binaries and licenses
 ```
 
-## Credits
+## Sources 
 
 - IPOPT: A. Wächter, L. T. Biegler, *Mathematical Programming* 106(1), 25–57, 2006 (EPL-2.0).
   Bundled binaries and their libraries are credited in `submission/ipopt_testing/THIRD_PARTY_NOTICES.md`.
