@@ -1,4 +1,4 @@
-# TRAD: Topology and Risk-Aware AC Dispatch
+# SPAR: Splitting and Power dispatch with Adversarial Risk-awareness
 
 ## Note on the Sim2Real principle
 
@@ -50,3 +50,10 @@ python main.py
 
 MIT (see `LICENSE`). The bundled IPOPT binaries are distributed under their own licenses, listed in
 `submission/ipopt_testing/THIRD_PARTY_NOTICES.md`.
+
+## About
+
+SPAR is the approach of the University of Vermont's Grid Optimization and Analysis Lab (GOAL) for the
+L2RPN 2026 competition (AI4REALNET).
+
+The team includes Hamza Ali, Amritanshu Pandey and Samuel Chevalier.
