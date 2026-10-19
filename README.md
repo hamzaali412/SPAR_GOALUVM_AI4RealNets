@@ -45,3 +45,8 @@ Then run:
 ```bash
 python main.py
 ```
+
+## License
+
+MIT (see `LICENSE`). The bundled IPOPT binaries are distributed under their own licenses, listed in
+`submission/ipopt_testing/THIRD_PARTY_NOTICES.md`.
