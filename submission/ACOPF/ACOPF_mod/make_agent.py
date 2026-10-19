@@ -137,4 +137,7 @@ def make_agent(env, this_directory_path=None):
             "agent that would silently lose its dispatch stage. Set "
             "ACOPF_REQUIRE_IPOPT=0 to downgrade this to a warning."
         )
+    from ACOPF.ACOPF_mod import obs_network
+
+    obs_network.use_environment_backend(env.backend)
     return ACOPFAgent(env.action_space)

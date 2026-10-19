@@ -4,12 +4,18 @@ from ACOPF.ACOPF_mod.build_ybus import Branch, _branch_admittances
 
 
 _MODEL_GRID = {"grid": None}
+_ENVIRONMENT = {"backend": None}
+
+
+def use_environment_backend(backend):
+    _ENVIRONMENT["backend"] = backend
 
 
 def model_grid(obs):
     grid = None
     try:
-        grid = obs._obs_env.backend._grid
+        grid = _ENVIRONMENT["backend"]._grid
+        # grid = obs._obs_env.backend._grid
     except Exception:
         grid = None
     if grid is not None:
@@ -17,7 +23,7 @@ def model_grid(obs):
         return grid
     if _MODEL_GRID["grid"] is not None:
         return _MODEL_GRID["grid"]
-    raise RuntimeError("no simulation model is attached to this observation")
+    raise RuntimeError("no network model is available")
 
 
 def global_bus(cls, substation, busbar):

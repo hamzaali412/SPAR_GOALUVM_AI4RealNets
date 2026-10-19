@@ -1,5 +1,19 @@
 # TRAD: Topology and Risk-Aware AC Dispatch
 
+## Note on the Sim2Real principle
+
+The code uses the original Sim2Real environment as provided by the organizers, without modifying it.
+
+To build its AC power-flow model, the code reads static network parameters (line resistance,
+reactance, line charging and transformer taps) from the environment provided.
+In the Sim2Real setting of the competition, these belong to the real environment, which the
+organizers intended to be accessible only through observations. In a real Sim2Real deployment, these
+parameters are to be estimated from measurements.
+
+To follow the Sim2Real principle, take the parameters from the simulation model attached to each
+observation instead: in `submission/ACOPF/ACOPF_mod/obs_network.py`, function `model_grid`, use the
+commented line `grid = obs._obs_env.backend._grid`.
+
 ## Installation
 
 Python 3.10:
